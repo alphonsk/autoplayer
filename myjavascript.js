@@ -34,8 +34,7 @@ function startTimer() {
 
 
 // start play
-function audioPlay(num) {
-  // console.log('called audio player ' + num )
+function audioPlay(num) { 
   if (num == 1) {
     mill.play();
   } else {
@@ -82,14 +81,12 @@ function getTime() {
 // play the audio
 // and show what min and what song is being played
 function startPlayer(currentTimeArray) {
-  const currentHour = currentTimeArray[0];
-  h = 17;
+  const currentHour = currentTimeArray[0]; 
   const currentMin = currentTimeArray[1];
   const arr = playTimesArray;
   const num = Math.floor((Math.random() * 2) + 1); 
 
-  if (currentHour == 17) {
-    // if (currentHour == 22) {
+  if (currentHour == 22) {
     addToNextPlay(arr[0], currentMin);
     addToNextPlay(arr[10], currentMin);
     addToNextPlay(arr[20], currentMin);
@@ -149,6 +146,5 @@ function startPlayer(currentTimeArray) {
 function addToNextPlay(playMin, currentMin) { 
 const num = Math.floor((Math.random() * 2) + 1);
   nextTimeArray.push(playMin);
-  if (playMin == currentMin) { audioPlay(num); }
-  console.log('add to nextplay ' + num)
+  if (playMin == currentMin) { audioPlay(num); } 
 }
